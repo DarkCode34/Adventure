@@ -1,5 +1,5 @@
-from Enemy import Gegner
-from Player import Player
+from Enemy import *
+from Player import *
 
 ork = Gegner(20, 20, 20)
 
@@ -14,9 +14,12 @@ while True:
     break
 
 Spielername = (str(input("Bitte gebe nun deinen Namen ein: ")))
-Player = Player(Spielername, 50, 50, 50)
+User = Player(Spielername, 50, 50, 50)
+print(f"Du heißt {User.name} und hast einen Lebenswert von {User.leben}")
 
+ork.angreifen(User)
+print(f"Der Spieler hat nurnoch {User.leben} nach dem Angriff des Orks.")
 #print(f"Der Spieler heißt {Player.name} und hat einen Angrifff von {Player.angriff} und eine Verteidung von {Player.verteidigung}")
-.
+
 
 

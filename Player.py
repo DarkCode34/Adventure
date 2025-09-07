@@ -12,4 +12,3 @@ class Player:
     def Verteidugng (self, verteidung):
         return self.verteidigung
     # muss noch definiert werden
-    .
