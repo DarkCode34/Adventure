@@ -16,6 +16,7 @@ User = Player(Spielername, 50, 50, 50)
 
 ork.angreifen(User)
 
-Battle = Battle
+Kampf = Battle()
+Kampf.Encounter(True, User, ork)
 
-Battle.Encounter("true", User)
+
