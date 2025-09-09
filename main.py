@@ -11,12 +11,10 @@ while True:
 
 Spielername = (str(input("Bitte gebe nun deinen Namen ein: ")))
 
-ork = Gegner(20, 30, 20, 'Peter')
-User = Player(Spielername, 50, 50, 50)
-
-ork.angreifen(User)
-
+ork = Gegner(200, 50, 20, 'Ork')
+User = Player(Spielername, 200, 50, 20)
 Kampf = Battle()
+
 Kampf.Encounter(True, User, ork)
 
 

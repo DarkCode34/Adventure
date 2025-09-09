@@ -5,20 +5,9 @@ class Gegner:
         self.verteidigung = verteidigung
         self.name = name
 
-    def angreifen (self, ziel):
+    def angreifen (self, verteidiger):
 
-        ziel.leben = ziel.leben + (ziel.verteidigung* 0.5) - self.angriff
+        verteidiger.leben = verteidiger.leben + (verteidiger.verteidigung* 0.5) - self.angriff
         #TODO muss noch verbessert / feingetun werden
         
-        if ziel.leben <= 0:
-            print(f"Du wurdest von {self.name} besiegt.")
-        else:
-            print(f"Du hast noch {ziel.leben} Lebenspunkte offen")
-
-
-
-
-#def angreifen (self, verteidung):
-#        return self.verteidigung
-    #muss noch definiert werden
 

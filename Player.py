@@ -5,10 +5,7 @@ class Player:
         self.angriff = angriff
         self.verteidigung = verteidigung
 
-    def Angriff (self, angriff):
-        return self.angriff
-    #muss noch definiert werden
+    def angreifen(self, verteidiger):
 
-    def Verteidugng (self, verteidung):
-        return self.verteidigung
-    # muss noch definiert werden
+        verteidiger.leben = verteidiger.leben + (verteidiger.verteidigung * 0.5) - self.angriff
+        # TODO muss noch verbessert / feingetun werden
