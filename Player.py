@@ -7,5 +7,5 @@ class Player:
 
     def angreifen(self, verteidiger):
 
-        verteidiger.leben = verteidiger.leben + (verteidiger.verteidigung * 0.5) - self.angriff
+        verteidiger.leben = (int(verteidiger.leben) + (verteidiger.verteidigung + 1) - self.angriff)
         # TODO muss noch verbessert / feingetun werden
