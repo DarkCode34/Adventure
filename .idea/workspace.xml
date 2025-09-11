@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dcaa6884-0195-4f52-a544-671064bf4395" name="Changes" comment="weiter am rundenbasierten modul gearbeitet. noch einige bugs und co drin, aber es wird nun nach runden gearbeitet.">
-      <change afterPath="$PROJECT_DIR$/Map.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Battle.py" beforeDir="false" afterPath="$PROJECT_DIR$/Battle.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Enemy.py" beforeDir="false" afterPath="$PROJECT_DIR$/Enemy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Player.py" beforeDir="false" afterPath="$PROJECT_DIR$/Player.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-    </list>
+    <list default="true" id="dcaa6884-0195-4f52-a544-671064bf4395" name="Changes" comment="rundenbaserter angriff soweit fertig. ganz geil geworden. aktuell bin ich an der map dran. schwieriges thema. chat-gpt hilft hier viel." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -102,7 +95,7 @@
       <workItem from="1757418790311" duration="657000" />
       <workItem from="1757420995587" duration="3883000" />
       <workItem from="1757440002787" duration="7385000" />
-      <workItem from="1757489999912" duration="12467000" />
+      <workItem from="1757489999912" duration="12521000" />
     </task>
     <task id="LOCAL-00001" summary="wrote a class enemy and player and import it to main.py">
       <option name="closed" value="true" />
@@ -184,7 +177,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757448616547</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="rundenbaserter angriff soweit fertig. ganz geil geworden. aktuell bin ich an der map dran. schwieriges thema. chat-gpt hilft hier viel.">
+      <option name="closed" value="true" />
+      <created>1757508876459</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1757508876459</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,7 +197,8 @@
     <MESSAGE value="hab einen angriffs methode eingefügt." />
     <MESSAGE value="rudimentäres runden-system eingefügt. mussverbessert werden" />
     <MESSAGE value="weiter am rundenbasierten modul gearbeitet. noch einige bugs und co drin, aber es wird nun nach runden gearbeitet." />
-    <option name="LAST_COMMIT_MESSAGE" value="weiter am rundenbasierten modul gearbeitet. noch einige bugs und co drin, aber es wird nun nach runden gearbeitet." />
+    <MESSAGE value="rundenbaserter angriff soweit fertig. ganz geil geworden. aktuell bin ich an der map dran. schwieriges thema. chat-gpt hilft hier viel." />
+    <option name="LAST_COMMIT_MESSAGE" value="rundenbaserter angriff soweit fertig. ganz geil geworden. aktuell bin ich an der map dran. schwieriges thema. chat-gpt hilft hier viel." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Adventure$Battle.coverage" NAME="Battle Coverage Results" MODIFIED="1757496990025" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
