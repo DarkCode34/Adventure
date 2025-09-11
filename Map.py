@@ -10,12 +10,9 @@ class Map:
         # Ein 2D-Array erstellen (Liste von Listen), gefüllt mit leeren Feldern
         self.karte = [[self.leeresFeld for _ in range(kartengroesse)] for _ in range(kartengroesse)]
 
-    def test():
-        return print(f"haha")
-
-    def zeigeKarte(self, karte):
-        for element in self.karte:
-            print(element)
+    def zeigeKarte(self):
+        for zeile in self.karte:
+            print("".join(zeile))
 
 
 
@@ -26,7 +23,7 @@ class Map:
 #Spieler bewegen (move_player)
 #
 Gegner bewegen (move_enemies)
-
+c
 Prüfen, ob ein Feld frei ist
 
 Spielfeld darstellen (draw_map)

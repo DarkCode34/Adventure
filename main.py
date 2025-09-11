@@ -15,9 +15,9 @@ Spielername = (str(input("Bitte gebe nun deinen Namen ein: ")))
 
 ork = Gegner(200, 50, 20, 'Ork')
 User = Player(Spielername, 100, 10, 20)
-Spielfeld = Map(10, "User", "ork", "_", "#", "I")
+Spielfeld = Map(20, "User", "ork", ".", "#", "I")
 
-Spielfeld.zeigeKarte(Spielfeld)
+Spielfeld.zeigeKarte()
 
 Kampf = Battle()
 
