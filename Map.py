@@ -14,15 +14,22 @@ class Map:
         for zeile in self.karte:
             print("".join(zeile))
 
+    def setPlayer(self, x, y):
+        self.karte[x][y] = self.Spieler
+        #x ist die länge
+        #y die breite
+
+    def movePlayer(self, User):
+        User_Decide = input("Möchtest du ihn bewegen?")
+        if User_Decide == "y":
+            self.karte[User.positionX][User.positionY] = self.leeresFeld
+            User.positionX = User.positionX
+            User.positionY = User.positionY-1
+            self.karte[User.positionX][User.positionY] = self.Spieler
 
 
-
-'''#
-#Spielfeld-Methoden
-#
-#Spieler bewegen (move_player)
-#
-Gegner bewegen (move_enemies)
+'''
+#Gegner bewegen (move_enemies)
 c
 Prüfen, ob ein Feld frei ist
 
