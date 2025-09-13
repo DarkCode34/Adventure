@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dcaa6884-0195-4f52-a544-671064bf4395" name="Changes" comment="rundenbaserter angriff soweit fertig. ganz geil geworden. aktuell bin ich an der map dran. schwieriges thema. chat-gpt hilft hier viel.">
-      <change afterPath="$PROJECT_DIR$/GUI.py" afterDir="false" />
+    <list default="true" id="dcaa6884-0195-4f52-a544-671064bf4395" name="Changes" comment="Bewegung für Spieler eingebaut. Jetzt muss ich mich um die GUI kümmern und die überall einbauen so dass sämtliche Texteingaben über eine klasse laufen">
+      <change afterPath="$PROJECT_DIR$/logic.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Map.py" beforeDir="false" afterPath="$PROJECT_DIR$/Map.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Player.py" beforeDir="false" afterPath="$PROJECT_DIR$/Player.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,32 +52,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.Battle.executor": "Run",
-    "Python.Enemy.executor": "Run",
-    "Python.Map.executor": "Run",
-    "Python.Player.executor": "Run",
-    "Python.main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "Shell Script.Unnamed.executor": "Run",
-    "full.screen.before.presentation.mode": "false",
-    "git-widget-placeholder": "master",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "C:/Users/kaise/PycharmProjects",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "terminal",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.Battle.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Enemy.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Map.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Player.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Shell Script.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/kaise/PycharmProjects&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\kaise\PycharmProjects" />
@@ -132,7 +130,8 @@
       <workItem from="1757420995587" duration="3883000" />
       <workItem from="1757440002787" duration="7385000" />
       <workItem from="1757489999912" duration="12521000" />
-      <workItem from="1757611173060" duration="14280000" />
+      <workItem from="1757611173060" duration="14546000" />
+      <workItem from="1757759938556" duration="2843000" />
     </task>
     <task id="LOCAL-00001" summary="wrote a class enemy and player and import it to main.py">
       <option name="closed" value="true" />
@@ -238,7 +237,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757612768520</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Bewegung für Spieler eingebaut. Jetzt muss ich mich um die GUI kümmern und die überall einbauen so dass sämtliche Texteingaben über eine klasse laufen">
+      <option name="closed" value="true" />
+      <created>1757706970933</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1757706970933</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,11 +258,12 @@
     <MESSAGE value="rudimentäres runden-system eingefügt. mussverbessert werden" />
     <MESSAGE value="weiter am rundenbasierten modul gearbeitet. noch einige bugs und co drin, aber es wird nun nach runden gearbeitet." />
     <MESSAGE value="rundenbaserter angriff soweit fertig. ganz geil geworden. aktuell bin ich an der map dran. schwieriges thema. chat-gpt hilft hier viel." />
-    <option name="LAST_COMMIT_MESSAGE" value="rundenbaserter angriff soweit fertig. ganz geil geworden. aktuell bin ich an der map dran. schwieriges thema. chat-gpt hilft hier viel." />
+    <MESSAGE value="Bewegung für Spieler eingebaut. Jetzt muss ich mich um die GUI kümmern und die überall einbauen so dass sämtliche Texteingaben über eine klasse laufen" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bewegung für Spieler eingebaut. Jetzt muss ich mich um die GUI kümmern und die überall einbauen so dass sämtliche Texteingaben über eine klasse laufen" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Adventure$Battle.coverage" NAME="Battle Coverage Results" MODIFIED="1757496990025" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Adventure$main.coverage" NAME="main Coverage Results" MODIFIED="1757706846090" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="C:\Users\kaise\PycharmProjects\Adventure\" />
+    <SUITE FILE_PATH="coverage/Adventure$main.coverage" NAME="main Coverage Results" MODIFIED="1757761577080" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="C:\Users\kaise\PycharmProjects\Adventure\" />
     <SUITE FILE_PATH="coverage/Adventure$Map.coverage" NAME="Map Coverage Results" MODIFIED="1757699549686" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Adventure$Player.coverage" NAME="Player Coverage Results" MODIFIED="1757492352064" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Adventure$Enemy.coverage" NAME="Enemy Coverage Results" MODIFIED="1757496715352" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
