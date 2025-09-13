@@ -6,4 +6,4 @@ class GUI:
         print("\n" * 500)
 
     def hauptmenue(self):
-        print(f"(1) Nach Vorn, (2) Nach Hinten, (3) Nach Rechts, (4) Nach Links"da muss input Stehen 
+        print(f"(1) Nach Vorn, (2) Nach Hinten, (3) Nach Rechts, (4) Nach Links"da muss input Stehen und als Parameter die Entscheidung User aus der Logic Klasse. 
