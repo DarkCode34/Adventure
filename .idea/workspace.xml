@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dcaa6884-0195-4f52-a544-671064bf4395" name="Changes" comment="Bewegung für Spieler eingebaut. Jetzt muss ich mich um die GUI kümmern und die überall einbauen so dass sämtliche Texteingaben über eine klasse laufen">
-      <change afterPath="$PROJECT_DIR$/logic.py" afterDir="false" />
+    <list default="true" id="dcaa6884-0195-4f52-a544-671064bf4395" name="Changes" comment="alles von main auf eine logic-klasse gezogen. so bleibt main sauber. wie funktioniert das mit GUI? aktuell wird daran gearbeitet.">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Battle.py" beforeDir="false" afterPath="$PROJECT_DIR$/Battle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Map.py" beforeDir="false" afterPath="$PROJECT_DIR$/Map.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logic.py" beforeDir="false" afterPath="$PROJECT_DIR$/logic.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,6 +46,9 @@
     &quot;accountId&quot;: &quot;3c507531-4e6a-40a1-9aca-7f93a9bc469e&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -131,7 +139,9 @@
       <workItem from="1757440002787" duration="7385000" />
       <workItem from="1757489999912" duration="12521000" />
       <workItem from="1757611173060" duration="14546000" />
-      <workItem from="1757759938556" duration="2843000" />
+      <workItem from="1757759938556" duration="2895000" />
+      <workItem from="1758030236727" duration="2307000" />
+      <workItem from="1758047073872" duration="6156000" />
     </task>
     <task id="LOCAL-00001" summary="wrote a class enemy and player and import it to main.py">
       <option name="closed" value="true" />
@@ -245,7 +255,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757706970933</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="alles von main auf eine logic-klasse gezogen. so bleibt main sauber. wie funktioniert das mit GUI? aktuell wird daran gearbeitet.">
+      <option name="closed" value="true" />
+      <created>1757763220173</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1757763220173</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -259,11 +277,12 @@
     <MESSAGE value="weiter am rundenbasierten modul gearbeitet. noch einige bugs und co drin, aber es wird nun nach runden gearbeitet." />
     <MESSAGE value="rundenbaserter angriff soweit fertig. ganz geil geworden. aktuell bin ich an der map dran. schwieriges thema. chat-gpt hilft hier viel." />
     <MESSAGE value="Bewegung für Spieler eingebaut. Jetzt muss ich mich um die GUI kümmern und die überall einbauen so dass sämtliche Texteingaben über eine klasse laufen" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bewegung für Spieler eingebaut. Jetzt muss ich mich um die GUI kümmern und die überall einbauen so dass sämtliche Texteingaben über eine klasse laufen" />
+    <MESSAGE value="alles von main auf eine logic-klasse gezogen. so bleibt main sauber. wie funktioniert das mit GUI? aktuell wird daran gearbeitet." />
+    <option name="LAST_COMMIT_MESSAGE" value="alles von main auf eine logic-klasse gezogen. so bleibt main sauber. wie funktioniert das mit GUI? aktuell wird daran gearbeitet." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Adventure$Battle.coverage" NAME="Battle Coverage Results" MODIFIED="1757496990025" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Adventure$main.coverage" NAME="main Coverage Results" MODIFIED="1757761577080" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="C:\Users\kaise\PycharmProjects\Adventure\" />
+    <SUITE FILE_PATH="coverage/Adventure$main.coverage" NAME="main Coverage Results" MODIFIED="1758053289147" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="C:\Users\kaise\PycharmProjects\Adventure\" />
     <SUITE FILE_PATH="coverage/Adventure$Map.coverage" NAME="Map Coverage Results" MODIFIED="1757699549686" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Adventure$Player.coverage" NAME="Player Coverage Results" MODIFIED="1757492352064" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Adventure$Enemy.coverage" NAME="Enemy Coverage Results" MODIFIED="1757496715352" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

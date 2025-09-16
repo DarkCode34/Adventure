@@ -10,6 +10,19 @@ class Map:
         # Ein 2D-Array erstellen (Liste von Listen), gefüllt mit leeren Feldern
         self.karte = [[self.leeresFeld for _ in range(kartengroesse)] for _ in range(kartengroesse)]
 
+        self.zieheWände()
+
+    def zieheWände(self):
+        # Obere und untere Zeile
+        for x in range(self.kartengroesse):
+            self.karte[0][x] = self.Wand  # Obere Zeile
+            self.karte[self.kartengroesse - 1][x] = self.Wand  # Untere Zeile
+
+        # Linke und rechte Spalte
+        for y in range(self.kartengroesse):
+            self.karte[y][0] = self.Wand  # Linke Spalte
+            self.karte[y][self.kartengroesse - 1] = self.Wand  # Rechte Spalte
+
     def zeigeKarte(self):
         for zeile in self.karte:
             print("".join(zeile))
@@ -19,27 +32,38 @@ class Map:
         #x ist die länge
         #y die breite
 
-    def movePlayer(self, User):
-        User_Decide = input("Möchtest du ihn bewegen?")
-        if User_Decide == "y":
+    def istBegehbar(self, x, y):
+        if self.karte[x][y] == self.Wand:
+            return False
+        else:
+            return True
+
+    def movePlayerLeft(self, User):
+        istBegehbar = self.istBegehbar(User.positionX, User.positionY-1)
+        if istBegehbar == True:
             self.karte[User.positionX][User.positionY] = self.leeresFeld
             User.positionX = User.positionX
             User.positionY = User.positionY-1
             self.karte[User.positionX][User.positionY] = self.Spieler
 
+    def movePlayerRight(self, User):
+        self.karte[User.positionX][User.positionY] = self.leeresFeld
+        User.positionX = User.positionX
+        User.positionY = User.positionY+1
+        self.karte[User.positionX][User.positionY] = self.Spieler
 
+    def movePlayerUp(self, User):
+        self.karte[User.positionX][User.positionY] = self.leeresFeld
+        User.positionX = User.positionX-1
+        User.positionY = User.positionY
+        self.karte[User.positionX][User.positionY] = self.Spieler
+
+    def movePlayerDown(self, User):
+        self.karte[User.positionX][User.positionY] = self.leeresFeld
+        User.positionX = User.positionX+1
+        User.positionY = User.positionY
+        self.karte[User.positionX][User.positionY] = self.Spieler
 '''
-#Gegner bewegen (move_enemies)
-c
-Prüfen, ob ein Feld frei ist
-
-Spielfeld darstellen (draw_map)
-
-Koordination von Spieler & Gegner
-
-Die Map-Klasse kennt die Positionen von allem.
-
-Wenn sich der Spieler oder ein Gegner bewegt, wird die Map aktualisiert.
 
 Kollisionen oder Kämpfe werden hier ausgelöst.
 '''

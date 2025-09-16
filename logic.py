@@ -1,5 +1,3 @@
-import os #todo kann noch später in die gui klasse eingebaut werden
-
 from Battle import *
 from Enemy import *
 from Map import *
@@ -10,31 +8,35 @@ class logic:
     def __init__(self):
         return
 
-    def start(self):
+    Kampf = Battle()
+    Menue = GUI()
+    Menue.Startscreen()
+    Spielername = Menue.spielernameAbfrage()
 
-        print(f'''
-        
-        ░░      ░░░       ░░░  ░░░░  ░░        ░░   ░░░  ░░        ░░  ░░░░  ░░       ░░░        ░
-▒  ▒▒▒▒  ▒▒  ▒▒▒▒  ▒▒  ▒▒▒▒  ▒▒  ▒▒▒▒▒▒▒▒    ▒▒  ▒▒▒▒▒  ▒▒▒▒▒  ▒▒▒▒  ▒▒  ▒▒▒▒  ▒▒  ▒▒▒▒▒▒▒
-▓  ▓▓▓▓  ▓▓  ▓▓▓▓  ▓▓▓  ▓▓  ▓▓▓      ▓▓▓▓  ▓  ▓  ▓▓▓▓▓  ▓▓▓▓▓  ▓▓▓▓  ▓▓       ▓▓▓      ▓▓▓
-█        ██  ████  ████    ████  ████████  ██    █████  █████  ████  ██  ███  ███  ███████
-█  ████  ██       ██████  █████        ██  ███   █████  ██████      ███  ████  ██        █
-                                                                                          ''')
+    Spielfeld = Map(30, " P", " G", " _", " W", " I")
+    ork = Gegner(200, 50, 20, 'Ork')
 
-        Spielername = (str(input("Bitte gebe nun deinen Namen ein: ")))
-        ork = Gegner(200, 50, 20, 'Ork')
-        Kampf = Battle()
-        Menue = GUI()
-        User = Player(Spielername, 100, 10, 20, 2, 4)
-        Spielfeld = Map(30, " P", " G", " _", " W", " I")
-        Menue.Abstandshalter()
+    User = Player(Spielername, 100, 10, 20, 2, 4)
 
-        while True:
+    Menue.Abstandshalter()
 
-            Spielfeld.setPlayer(User.positionX,User.positionY)
-            Spielfeld.zeigeKarte()
-            Menue.hauptmenue()
-            Spielfeld.movePlayer(User)
-            os.system('cls')  # Windows
+    while True: #todo muss noch gemacht werden
+
+        Spielfeld.setPlayer(User.positionX,User.positionY)
+        Spielfeld.zeigeKarte()
+        entscheidung_User = Menue.hauptmenue()
+        if entscheidung_User == '1':
+            Spielfeld.movePlayerUp(User)
+        elif entscheidung_User == '2':
+            Spielfeld.movePlayerDown(User)
+        elif entscheidung_User == '3':
+            Spielfeld.movePlayerRight(User)
+        elif entscheidung_User == '4':
+            Spielfeld.movePlayerLeft(User)
+        else:
+            Menue.fehlerhafteEingabe()
+
+        Menue.bildschirmLöschen()
+
 
         #Kampf.Encounter(True, User, ork)
