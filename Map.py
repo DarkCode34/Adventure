@@ -11,6 +11,7 @@ class Map:
         self.karte = [[self.leeresFeld for _ in range(kartengroesse)] for _ in range(kartengroesse)]
 
         self.zieheWände()
+        self.zieheZwischenwände()
 
     def zieheWände(self):
         # Obere und untere Zeile
@@ -22,6 +23,16 @@ class Map:
         for y in range(self.kartengroesse):
             self.karte[y][0] = self.Wand  # Linke Spalte
             self.karte[y][self.kartengroesse - 1] = self.Wand  # Rechte Spalte
+
+    def zieheZwischenwände(self):
+
+        self.karte[7][5] = self.Wand
+        self.karte[6][5] = self.Wand
+        self.karte[5][5] = self.Wand
+        self.karte[4][5] = self.Wand
+        self.karte[3][5] = self.Wand
+
+
 
     def zeigeKarte(self):
         for zeile in self.karte:
@@ -47,22 +58,28 @@ class Map:
             self.karte[User.positionX][User.positionY] = self.Spieler
 
     def movePlayerRight(self, User):
-        self.karte[User.positionX][User.positionY] = self.leeresFeld
-        User.positionX = User.positionX
-        User.positionY = User.positionY+1
-        self.karte[User.positionX][User.positionY] = self.Spieler
+        istBegehbar = self.istBegehbar(User.positionX, User.positionY + 1)
+        if istBegehbar == True:
+            self.karte[User.positionX][User.positionY] = self.leeresFeld
+            User.positionX = User.positionX
+            User.positionY = User.positionY+1
+            self.karte[User.positionX][User.positionY] = self.Spieler
 
     def movePlayerUp(self, User):
-        self.karte[User.positionX][User.positionY] = self.leeresFeld
-        User.positionX = User.positionX-1
-        User.positionY = User.positionY
-        self.karte[User.positionX][User.positionY] = self.Spieler
+        istBegehbar = self.istBegehbar(User.positionX-1, User.positionY)
+        if istBegehbar == True:
+            self.karte[User.positionX][User.positionY] = self.leeresFeld
+            User.positionX = User.positionX-1
+            User.positionY = User.positionY
+            self.karte[User.positionX][User.positionY] = self.Spieler
 
     def movePlayerDown(self, User):
-        self.karte[User.positionX][User.positionY] = self.leeresFeld
-        User.positionX = User.positionX+1
-        User.positionY = User.positionY
-        self.karte[User.positionX][User.positionY] = self.Spieler
+        istBegehbar = self.istBegehbar(User.positionX+1, User.positionY)
+        if istBegehbar == True:
+            self.karte[User.positionX][User.positionY] = self.leeresFeld
+            User.positionX = User.positionX+1
+            User.positionY = User.positionY
+            self.karte[User.positionX][User.positionY] = self.Spieler
 '''
 
 Kollisionen oder Kämpfe werden hier ausgelöst.

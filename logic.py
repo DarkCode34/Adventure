@@ -20,6 +20,7 @@ class logic:
 
     Menue.Abstandshalter()
 
+
     while True: #todo muss noch gemacht werden
 
         Spielfeld.setPlayer(User.positionX,User.positionY)

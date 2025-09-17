@@ -1,4 +1,7 @@
+import random
+
 from GUI import *
+
 
 Menue = GUI()
 
@@ -42,5 +45,11 @@ class Battle:
             else:
                 Menue.entkommen()
 
+    def zufallsberechnung(self):
+        Zufallsberechnung = random.randint(1, 100)
+        if Zufallsberechnung > 20:
+            return True
+        else:
+            return False
 
 
